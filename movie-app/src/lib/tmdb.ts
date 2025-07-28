@@ -11,8 +11,8 @@ interface TMDBResponse {
 }
 
 
-export async function fetchTrendingMovies(apiKey: string): Promise<Movie[]> {
-    const res = await fetch (`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}`)
+export async function fetchTrendingMovies() {
+    const res = await fetch (`https://api.themoviedb.org/3/movie/now_playing?api_key=ab14e20bc8620483961722695a7a878a`)
     
     if(!res.ok) {
         throw new Error ('failed to fetch trending movies');
