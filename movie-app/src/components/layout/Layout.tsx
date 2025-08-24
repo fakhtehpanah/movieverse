@@ -4,13 +4,14 @@ import Header from './Header'
 
 interface Props {
     children: ReactNode;
+    className?: string;
 }
 
-function Layout({children}: Props) {
+function Layout({children, className}: Props) {
   return (
     <div>
         <Header/>
-        <main>{children}</main>
+        <main className={className}>{children}</main>
         <Footer/>
     </div>
   )
