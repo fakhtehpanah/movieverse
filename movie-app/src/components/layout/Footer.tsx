@@ -1,9 +1,9 @@
-import React from 'react'
-
-function Footer() {
+export default function Footer() {
   return (
-    <div className='bg-purple-600'>Footer</div>
-  )
+    <footer className="bg-gray-800 text-gray-400 text-center py-6 my-12">
+      <p className="text-sm">
+        © {new Date().getFullYear()} MovieVerse. Powered by TMDB.
+      </p>
+    </footer>
+  );
 }
-
-export default Footer

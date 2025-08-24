@@ -1,24 +1,12 @@
-import Link from 'next/link'
-import React from 'react'
-
-function Header() {
+export default function Header() {
   return (
-    <div className=' p-2'>
-        <div className=' p-3 flex flex-row-reverse justify-between items-center border-b'>
-            <div className='flex flex-row-reverse p-2 gap-x-5 items-center '>
-                <Link href={'/'} className='lg:hidden bg-myYellow p-1 rounded-full'>Use app</Link>
-                {/* <Link href={'/'} className='hidden lg:block'>hh</Link> */}
-                <Link href={'/'}>Sing in</Link>
-                <Link href={'/'} className='hidden lg:block'>Watchlist</Link>
-                <button>3</button>
-            </div>
-            <div className='flex flex-row-reverse lg:flex-row gap-x-2.5 items-center'>
-                <Link href={'/'} className='bg-myYellow p-2 rounded-full font-bold'>IMDb</Link>
-                <Link href={'/'}>menu</Link>
-            </div>
-        </div>
-    </div>
-  )
+    <header className="bg-gray-900 text-white px-6 py-4 flex items-center justify-between shadow-md">
+      <h1 className="text-2xl font-bold tracking-wide">MovieVerse</h1>
+      <nav className="space-x-6">
+        <a href="/" className="hover:text-red-400 transition">Home</a>
+        <a href="/movies" className="hover:text-red-400 transition">Movies</a>
+        <a href="/tv" className="hover:text-red-400 transition">TV Shows</a>
+      </nav>
+    </header>
+  );
 }
-
-export default Header
